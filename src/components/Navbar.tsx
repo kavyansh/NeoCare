@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 function LinkItem({
   children,
@@ -8,9 +8,17 @@ function LinkItem({
   children: React.ReactElement | string;
   toPath: string;
 }) {
+  const location = useLocation();
+  const isActive =
+    location.pathname === toPath ||
+    (location.pathname === "/" && toPath === "/home");
+
   return (
-    <li>
+    <li className="relative">
       <NavLink to={toPath}>{children}</NavLink>
+      {isActive && (
+        <span className="bg-primary-orange w-full h-[3px] absolute bottom-[-54px] left-0" />
+      )}
     </li>
   );
 }
