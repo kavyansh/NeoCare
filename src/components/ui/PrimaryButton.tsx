@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "./button";
 
 export default function PrimaryButton({
   className,
@@ -8,8 +9,8 @@ export default function PrimaryButton({
   children: React.ReactNode;
 }) {
   return (
-    <button className={`bg-primary-orange rounded-md px-5 py-2.5 ${className}`}>
+    <Button variant="primary" className="flex gap-2 py-6 px-5 text-white">
       {children}
-    </button>
+    </Button>
   );
 }

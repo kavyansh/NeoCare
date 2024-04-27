@@ -1,8 +1,8 @@
 import React from "react";
 import NeoCareLogo from "/assets/logos/NeoCareLogo.jpeg";
 import Navbar from "./Navbar";
-import PrimaryButton from "./Buttons/PrimaryButton";
 import AskIcon from "/assets/icons/askIcon.svg";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function Header() {
   return (
