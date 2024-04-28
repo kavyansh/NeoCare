@@ -1,4 +1,3 @@
-import React from "react";
 import NeoCareLogo from "/assets/logos/NeoCareLogo.jpeg";
 import Navbar from "./Navbar";
 import AskIcon from "/assets/icons/askIcon.svg";
